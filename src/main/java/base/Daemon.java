@@ -22,12 +22,14 @@ public class Daemon {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Thread t = new DemonT();
-//      设置线程为守护线程
-        t.setDaemon(true);
-        t.start();
-
-        Thread.sleep(2000);
+//        Thread t = new DemonT();
+////      设置线程为守护线程
+//        t.setDaemon(true);
+//        t.start();
+//
+//        Thread.sleep(2000);
+        System.out.println( (int)3 / 2);
     }
+
 
 }

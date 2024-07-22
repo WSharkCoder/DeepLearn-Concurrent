@@ -12,17 +12,7 @@ public class StopThread {
      */
     public static StopThread.User u = new User();
 
-    public static void main(String[] args) throws InterruptedException {
-        //开启读线程
-        new ReadObjectThread().start();
-        while (true) {
-            //间隔150ms开启和关闭写线程
-            Thread t = new ChangeObjectThread();
-            t.start();
-            Thread.sleep(150);
-            t.stop();
-        }
-    }
+
 
     /**
      * 用户ID和name本应该始终一致
@@ -61,6 +51,17 @@ public class StopThread {
         }
     }
 
+    public static void main(String[] args) throws InterruptedException {
+        //开启读线程
+        new ReadObjectThread().start();
+        while (true) {
+            //间隔150ms开启和关闭写线程
+            Thread t = new ChangeObjectThread();
+            t.start();
+            Thread.sleep(150);
+            t.stop();
+        }
+    }
     /**
      * 写线程修改ID和Name
      */

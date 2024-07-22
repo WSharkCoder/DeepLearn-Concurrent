@@ -38,6 +38,8 @@ public class InterruptStopThread {
         public void run() {
             while (true) {
                 if (Thread.interrupted()) {
+                    System.out.println(!u.name.equals(String.valueOf(u.id)) ? u.id + "/" + u.name : "");
+
                     System.out.println("Thread exit.");
                     break;
                 }
@@ -48,12 +50,30 @@ public class InterruptStopThread {
                     try {
                         Thread.sleep(100);
                     } catch (InterruptedException e) {
-                        e.printStackTrace();
+                        //e.printStackTrace();
+                        Thread.currentThread().interrupt();
                     }
                     //修改name
                     u.setName(String.valueOf(v));
                 }
                 //让掉当前线程的CPU时间片，正在运行的线程转变为就绪状态，重新竞争CPU调度
+                Thread.yield();
+            }
+        }
+    }
+
+    /**
+     * 读线程 当id和name不一致则输出
+     */
+    public static class ReadObjectThread extends Thread {
+        @Override
+        public void run() {
+            while (true) {
+                synchronized (u) {
+                    if (u.getId() != Integer.valueOf(u.getName())) {
+                        System.out.println(u.toString());
+                    }
+                }
                 Thread.yield();
             }
         }
@@ -97,20 +117,4 @@ public class InterruptStopThread {
     }
 
 
-    /**
-     * 读线程 当id和name不一致则输出
-     */
-    public static class ReadObjectThread extends Thread {
-        @Override
-        public void run() {
-            while (true) {
-                synchronized (u) {
-                    if (u.getId() != Integer.valueOf(u.getName())) {
-                        System.out.println(u.toString());
-                    }
-                }
-                Thread.yield();
-            }
-        }
-    }
 }
