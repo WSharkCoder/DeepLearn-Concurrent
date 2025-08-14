@@ -1,0 +1,1506 @@
+--- Execution profile ---
+Total samples       : 820
+unknown_Java        : 1 (0.12%)
+deoptimization      : 1 (0.12%)
+
+--- 3354939200 ns (37.56%), 336 samples
+  [ 0] SafepointSynchronize::begin()
+  [ 1] VMThread::loop()
+  [ 2] VMThread::run()
+  [ 3] java_start(Thread*)
+  [ 4] start_thread
+
+--- 1158261400 ns (12.97%), 115 samples
+  [ 0] SpinPause
+  [ 1] StealTask::do_it(GCTaskManager*, unsigned int)
+  [ 2] GCTaskThread::run()
+  [ 3] java_start(Thread*)
+  [ 4] start_thread
+
+--- 852873100 ns (9.55%), 86 samples
+  [ 0] __schedule_[k]
+  [ 1] schedule_[k]
+  [ 2] __x64_sys_sched_yield_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __sched_yield
+  [ 6] VMThread::loop()
+  [ 7] VMThread::run()
+  [ 8] java_start(Thread*)
+  [ 9] start_thread
+
+--- 352103900 ns (3.94%), 35 samples
+  [ 0] syscall_enter_from_user_mode_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] __sched_yield
+  [ 4] VMThread::loop()
+  [ 5] VMThread::run()
+  [ 6] java_start(Thread*)
+  [ 7] start_thread
+
+--- 325073200 ns (3.64%), 6 samples
+  [ 0] clear_page_erms_[k]
+  [ 1] clear_subpage_[k]
+  [ 2] clear_huge_page_[k]
+  [ 3] do_huge_pmd_anonymous_page_[k]
+  [ 4] __handle_mm_fault_[k]
+  [ 5] handle_mm_fault_[k]
+  [ 6] do_user_addr_fault_[k]
+  [ 7] exc_page_fault_[k]
+  [ 8] asm_exc_page_fault_[k]
+  [ 9] oopDesc* PSPromotionManager::copy_to_survivor_space<false>(oopDesc*)
+  [10] PSPromotionManager::drain_stacks_depth(bool)
+  [11] CardTableExtension::scavenge_contents_parallel(ObjectStartArray*, MutableSpace*, HeapWord*, PSPromotionManager*, unsigned int, unsigned int)
+  [12] OldToYoungRootsTask::do_it(GCTaskManager*, unsigned int)
+  [13] GCTaskThread::run()
+  [14] java_start(Thread*)
+  [15] start_thread
+
+--- 274956600 ns (3.08%), 27 samples
+  [ 0] do_sched_yield_[k]
+  [ 1] __x64_sys_sched_yield_[k]
+  [ 2] do_syscall_64_[k]
+  [ 3] entry_SYSCALL_64_after_hwframe_[k]
+  [ 4] __sched_yield
+  [ 5] VMThread::loop()
+  [ 6] VMThread::run()
+  [ 7] java_start(Thread*)
+  [ 8] start_thread
+
+--- 245470600 ns (2.75%), 5 samples
+  [ 0] clear_page_erms_[k]
+  [ 1] clear_subpage_[k]
+  [ 2] clear_huge_page_[k]
+  [ 3] do_huge_pmd_anonymous_page_[k]
+  [ 4] __handle_mm_fault_[k]
+  [ 5] handle_mm_fault_[k]
+  [ 6] do_user_addr_fault_[k]
+  [ 7] exc_page_fault_[k]
+  [ 8] asm_exc_page_fault_[k]
+  [ 9] /lib/x86_64-linux-gnu/libc-2.27.so
+  [10] PSPromotionManager::drain_stacks_depth(bool)
+  [11] CardTableExtension::scavenge_contents_parallel(ObjectStartArray*, MutableSpace*, HeapWord*, PSPromotionManager*, unsigned int, unsigned int)
+  [12] OldToYoungRootsTask::do_it(GCTaskManager*, unsigned int)
+  [13] GCTaskThread::run()
+  [14] java_start(Thread*)
+  [15] start_thread
+
+--- 219935500 ns (2.46%), 22 samples
+  [ 0] __sched_yield
+  [ 1] VMThread::loop()
+  [ 2] VMThread::run()
+  [ 3] java_start(Thread*)
+  [ 4] start_thread
+
+--- 160707700 ns (1.80%), 16 samples
+  [ 0] __schedule_[k]
+  [ 1] schedule_[k]
+  [ 2] __x64_sys_sched_yield_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __sched_yield
+  [ 6] java.lang.Thread.yield
+  [ 7] base.stop.StopThread$ReadObjectThread.run
+
+--- 128660200 ns (1.44%), 3 samples
+  [ 0] clear_page_erms_[k]
+  [ 1] clear_subpage_[k]
+  [ 2] clear_huge_page_[k]
+  [ 3] do_huge_pmd_anonymous_page_[k]
+  [ 4] __handle_mm_fault_[k]
+  [ 5] handle_mm_fault_[k]
+  [ 6] do_user_addr_fault_[k]
+  [ 7] exc_page_fault_[k]
+  [ 8] asm_exc_page_fault_[k]
+  [ 9] /lib/x86_64-linux-gnu/libc-2.27.so
+  [10] PSRootsClosure<false>::do_oop(oopDesc**)
+  [11] JNIHandles::oops_do(OopClosure*)
+  [12] ScavengeRootsTask::do_it(GCTaskManager*, unsigned int)
+  [13] GCTaskThread::run()
+  [14] java_start(Thread*)
+  [15] start_thread
+
+--- 104989100 ns (1.18%), 10 samples
+  [ 0] try_to_wake_up_[k]
+  [ 1] wake_up_q_[k]
+  [ 2] futex_wake_[k]
+  [ 3] do_futex_[k]
+  [ 4] __x64_sys_futex_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] __pthread_cond_signal
+
+--- 83404400 ns (0.93%), 2 samples
+  [ 0] clear_page_erms_[k]
+  [ 1] clear_subpage_[k]
+  [ 2] clear_huge_page_[k]
+  [ 3] do_huge_pmd_anonymous_page_[k]
+  [ 4] __handle_mm_fault_[k]
+  [ 5] handle_mm_fault_[k]
+  [ 6] do_user_addr_fault_[k]
+  [ 7] exc_page_fault_[k]
+  [ 8] asm_exc_page_fault_[k]
+  [ 9] /lib/x86_64-linux-gnu/libc-2.27.so
+  [10] PSRootsClosure<false>::do_oop(oopDesc**)
+  [11] HandleArea::oops_do(OopClosure*)
+  [12] JavaThread::oops_do(OopClosure*, CLDClosure*, CodeBlobClosure*)
+  [13] ThreadRootsTask::do_it(GCTaskManager*, unsigned int)
+  [14] GCTaskThread::run()
+  [15] java_start(Thread*)
+  [16] start_thread
+
+--- 76553300 ns (0.86%), 3 samples
+  [ 0] clear_page_erms_[k]
+  [ 1] clear_subpage_[k]
+  [ 2] clear_huge_page_[k]
+  [ 3] do_huge_pmd_anonymous_page_[k]
+  [ 4] __handle_mm_fault_[k]
+  [ 5] handle_mm_fault_[k]
+  [ 6] do_user_addr_fault_[k]
+  [ 7] exc_page_fault_[k]
+  [ 8] asm_exc_page_fault_[k]
+  [ 9] oopDesc* PSPromotionManager::copy_to_survivor_space<false>(oopDesc*)
+  [10] PSRootsClosure<false>::do_oop(oopDesc**)
+  [11] InterpreterOopMap::iterate_oop(OffsetClosure*) const
+  [12] frame::oops_interpreted_do(OopClosure*, CLDClosure*, RegisterMap const*, bool)
+  [13] JavaThread::oops_do(OopClosure*, CLDClosure*, CodeBlobClosure*)
+  [14] ThreadRootsTask::do_it(GCTaskManager*, unsigned int)
+  [15] GCTaskThread::run()
+  [16] java_start(Thread*)
+  [17] start_thread
+
+--- 76205600 ns (0.85%), 8 samples
+  [ 0] ParallelTaskTerminator::offer_termination(TerminatorTerminator*)
+  [ 1] StealTask::do_it(GCTaskManager*, unsigned int)
+  [ 2] GCTaskThread::run()
+  [ 3] java_start(Thread*)
+  [ 4] start_thread
+
+--- 70463500 ns (0.79%), 7 samples
+  [ 0] Method::checked_resolve_jmethod_id(_jmethodID*)
+  [ 1] jvmti_GetMethodDeclaringClass
+  [ 2] getMethodClass
+  [ 3] cbBreakpoint
+  [ 4] JvmtiExport::post_raw_breakpoint(JavaThread*, Method*, unsigned char*)
+  [ 5] InterpreterRuntime::_breakpoint(JavaThread*, Method*, unsigned char*)
+  [ 6] java.lang.Thread.resume
+  [ 7] java.lang.Thread.stop
+  [ 8] base.stop.StopThread.main
+
+--- 61930600 ns (0.69%), 6 samples
+  [ 0] try_to_wake_up_[k]
+  [ 1] wake_up_q_[k]
+  [ 2] futex_wake_[k]
+  [ 3] do_futex_[k]
+  [ 4] __x64_sys_futex_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] __lll_unlock_wake
+  [ 8] VMThread::loop()
+  [ 9] VMThread::run()
+  [10] java_start(Thread*)
+  [11] start_thread
+
+--- 49950700 ns (0.56%), 1 sample
+  [ 0] clear_page_erms_[k]
+  [ 1] clear_subpage_[k]
+  [ 2] clear_huge_page_[k]
+  [ 3] do_huge_pmd_anonymous_page_[k]
+  [ 4] __handle_mm_fault_[k]
+  [ 5] handle_mm_fault_[k]
+  [ 6] do_user_addr_fault_[k]
+  [ 7] exc_page_fault_[k]
+  [ 8] asm_exc_page_fault_[k]
+  [ 9] oopDesc* PSPromotionManager::copy_to_survivor_space<false>(oopDesc*)
+  [10] PSRootsClosure<false>::do_oop(oopDesc**)
+  [11] ClassLoaderDataGraph::oops_do(OopClosure*, KlassClosure*, bool)
+  [12] ScavengeRootsTask::do_it(GCTaskManager*, unsigned int)
+  [13] GCTaskThread::run()
+  [14] java_start(Thread*)
+  [15] start_thread
+
+--- 40218200 ns (0.45%), 4 samples
+  [ 0] __sched_yield
+  [ 1] java.lang.Thread.yield
+  [ 2] base.stop.StopThread$ReadObjectThread.run
+
+--- 33032800 ns (0.37%), 3 samples
+  [ 0] __wake_up_common_lock_[k]
+  [ 1] sock_def_readable_[k]
+  [ 2] __netlink_sendskb_[k]
+  [ 3] netlink_broadcast_filtered_[k]
+  [ 4] netlink_broadcast_[k]
+  [ 5] proc_fork_connector_[k]
+  [ 6] copy_process_[k]
+  [ 7] kernel_clone_[k]
+  [ 8] __do_sys_clone_[k]
+  [ 9] do_syscall_64_[k]
+  [10] entry_SYSCALL_64_after_hwframe_[k]
+  [11] __clone
+  [12] os::create_thread(Thread*, os::ThreadType, unsigned long)
+  [13] JVM_StartThread
+  [14] java.lang.Thread.start0
+  [15] java.lang.Thread.start
+  [16] base.stop.StopThread.main
+
+--- 31393800 ns (0.35%), 1 sample
+  [ 0] clear_page_erms_[k]
+  [ 1] clear_subpage_[k]
+  [ 2] clear_huge_page_[k]
+  [ 3] do_huge_pmd_anonymous_page_[k]
+  [ 4] __handle_mm_fault_[k]
+  [ 5] handle_mm_fault_[k]
+  [ 6] do_user_addr_fault_[k]
+  [ 7] exc_page_fault_[k]
+  [ 8] asm_exc_page_fault_[k]
+  [ 9] /lib/x86_64-linux-gnu/libc-2.27.so
+  [10] PSRootsClosure<false>::do_oop(oopDesc**)
+  [11] InterpreterOopMap::iterate_oop(OffsetClosure*) const
+  [12] frame::oops_interpreted_do(OopClosure*, CLDClosure*, RegisterMap const*, bool)
+  [13] JavaThread::oops_do(OopClosure*, CLDClosure*, CodeBlobClosure*)
+  [14] ThreadRootsTask::do_it(GCTaskManager*, unsigned int)
+  [15] GCTaskThread::run()
+  [16] java_start(Thread*)
+  [17] start_thread
+
+--- 30138400 ns (0.34%), 3 samples
+  [ 0] syscall_enter_from_user_mode_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] __sched_yield
+  [ 4] java.lang.Thread.yield
+  [ 5] base.stop.StopThread$ReadObjectThread.run
+
+--- 30015600 ns (0.34%), 3 samples
+  [ 0] __sched_yield
+  [ 1] SafepointSynchronize::begin()
+  [ 2] VMThread::loop()
+  [ 3] VMThread::run()
+  [ 4] java_start(Thread*)
+  [ 5] start_thread
+
+--- 30006600 ns (0.34%), 3 samples
+  [ 0] do_syscall_64_[k]
+  [ 1] entry_SYSCALL_64_after_hwframe_[k]
+  [ 2] __sched_yield
+  [ 3] VMThread::loop()
+  [ 4] VMThread::run()
+  [ 5] java_start(Thread*)
+  [ 6] start_thread
+
+--- 29993600 ns (0.34%), 3 samples
+  [ 0] x64_sys_call_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] __sched_yield
+  [ 4] VMThread::loop()
+  [ 5] VMThread::run()
+  [ 6] java_start(Thread*)
+  [ 7] start_thread
+
+--- 29856000 ns (0.33%), 3 samples
+  [ 0] SpinPause
+  [ 1] VMThread::loop()
+  [ 2] VMThread::run()
+  [ 3] java_start(Thread*)
+  [ 4] start_thread
+
+--- 27302200 ns (0.31%), 3 samples
+  [ 0] try_to_wake_up_[k]
+  [ 1] wake_up_q_[k]
+  [ 2] futex_wake_[k]
+  [ 3] do_futex_[k]
+  [ 4] __x64_sys_futex_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] __pthread_cond_signal
+  [ 8] java.lang.Thread.resume
+  [ 9] java.lang.Thread.stop
+  [10] base.stop.StopThread.main
+
+--- 20920400 ns (0.23%), 2 samples
+  [ 0] JVM_Yield
+  [ 1] java.lang.Thread.yield
+  [ 2] base.stop.StopThread$ReadObjectThread.run
+
+--- 20276800 ns (0.23%), 2 samples
+  [ 0] tcp_wfree_[k]
+  [ 1] loopback_xmit_[k]
+  [ 2] dev_hard_start_xmit_[k]
+  [ 3] __dev_queue_xmit_[k]
+  [ 4] ip_finish_output2_[k]
+  [ 5] __ip_queue_xmit_[k]
+  [ 6] __tcp_transmit_skb_[k]
+  [ 7] tcp_write_xmit_[k]
+  [ 8] __tcp_push_pending_frames_[k]
+  [ 9] tcp_sendmsg_locked_[k]
+  [10] tcp_sendmsg_[k]
+  [11] __sys_sendto_[k]
+  [12] __x64_sys_sendto_[k]
+  [13] do_syscall_64_[k]
+  [14] entry_SYSCALL_64_after_hwframe_[k]
+  [15] __send
+
+--- 20259400 ns (0.23%), 2 samples
+  [ 0] __wake_up_common_lock_[k]
+  [ 1] sock_def_readable_[k]
+  [ 2] tcp_rcv_established_[k]
+  [ 3] tcp_v4_do_rcv_[k]
+  [ 4] tcp_v4_rcv_[k]
+  [ 5] ip_protocol_deliver_rcu_[k]
+  [ 6] ip_local_deliver_finish_[k]
+  [ 7] __netif_receive_skb_one_core_[k]
+  [ 8] process_backlog_[k]
+  [ 9] __napi_poll_[k]
+  [10] net_rx_action_[k]
+  [11] handle_softirqs_[k]
+  [12] do_softirq_[k]
+  [13] __local_bh_enable_ip_[k]
+  [14] ip_finish_output2_[k]
+  [15] __ip_queue_xmit_[k]
+  [16] __tcp_transmit_skb_[k]
+  [17] tcp_write_xmit_[k]
+  [18] __tcp_push_pending_frames_[k]
+  [19] tcp_sendmsg_locked_[k]
+  [20] tcp_sendmsg_[k]
+  [21] __sys_sendto_[k]
+  [22] __x64_sys_sendto_[k]
+  [23] do_syscall_64_[k]
+  [24] entry_SYSCALL_64_after_hwframe_[k]
+  [25] __send
+
+--- 20170000 ns (0.23%), 2 samples
+  [ 0] wake_up_new_task_[k]
+  [ 1] kernel_clone_[k]
+  [ 2] __do_sys_clone_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __clone
+  [ 6] os::create_thread(Thread*, os::ThreadType, unsigned long)
+  [ 7] JVM_StartThread
+  [ 8] java.lang.Thread.start0
+  [ 9] java.lang.Thread.start
+  [10] base.stop.StopThread.main
+
+--- 20152200 ns (0.23%), 2 samples
+  [ 0] LinearScanWalker::find_free_reg(int, int, int, int, bool*)
+  [ 1] LinearScanWalker::alloc_free_reg(Interval*)
+  [ 2] LinearScanWalker::activate_current()
+  [ 3] IntervalWalker::walk_to(int) [clone .constprop.203]
+  [ 4] LinearScan::allocate_registers()
+  [ 5] LinearScan::do_linear_scan()
+  [ 6] Compilation::emit_lir()
+  [ 7] Compilation::compile_java_method()
+  [ 8] Compilation::compile_method()
+  [ 9] Compilation::Compilation(AbstractCompiler*, ciEnv*, ciMethod*, int, BufferBlob*)
+  [10] Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [11] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [12] CompileBroker::compiler_thread_loop()
+  [13] JavaThread::thread_main_inner()
+  [14] JavaThread::run()
+  [15] java_start(Thread*)
+  [16] start_thread
+
+--- 20136600 ns (0.23%), 2 samples
+  [ 0] Method::checked_resolve_jmethod_id(_jmethodID*)
+  [ 1] jvmti_GetMethodDeclaringClass
+  [ 2] getMethodClass
+  [ 3] cbFramePop
+  [ 4] JvmtiExport::post_method_exit(JavaThread*, Method*, frame)
+  [ 5] InterpreterRuntime::post_method_exit(JavaThread*)
+  [ 6] java.lang.Thread.resume
+  [ 7] java.lang.Thread.stop
+  [ 8] base.stop.StopThread.main
+
+--- 20050700 ns (0.22%), 2 samples
+  [ 0] __schedule_[k]
+  [ 1] schedule_[k]
+  [ 2] __x64_sys_sched_yield_[k]
+  [ 3] do_syscall_64_[k]
+  [ 4] entry_SYSCALL_64_after_hwframe_[k]
+  [ 5] __sched_yield
+  [ 6] SafepointSynchronize::begin()
+  [ 7] VMThread::loop()
+  [ 8] VMThread::run()
+  [ 9] java_start(Thread*)
+  [10] start_thread
+
+--- 20050300 ns (0.22%), 2 samples
+  [ 0] PhaseCFG::build_cfg()
+  [ 1] PhaseCFG::PhaseCFG(Arena*, RootNode*, Matcher&)
+  [ 2] Compile::Code_Gen()
+  [ 3] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [ 4] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [ 5] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [ 6] CompileBroker::compiler_thread_loop()
+  [ 7] JavaThread::thread_main_inner()
+  [ 8] JavaThread::run()
+  [ 9] java_start(Thread*)
+  [10] start_thread
+
+--- 20022800 ns (0.22%), 2 samples
+  [ 0] syscall_enter_from_user_mode_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] __sched_yield
+  [ 4] SafepointSynchronize::begin()
+  [ 5] VMThread::loop()
+  [ 6] VMThread::run()
+  [ 7] java_start(Thread*)
+  [ 8] start_thread
+
+--- 20007800 ns (0.22%), 2 samples
+  [ 0] schedule_[k]
+  [ 1] __x64_sys_sched_yield_[k]
+  [ 2] do_syscall_64_[k]
+  [ 3] entry_SYSCALL_64_after_hwframe_[k]
+  [ 4] __sched_yield
+  [ 5] VMThread::loop()
+  [ 6] VMThread::run()
+  [ 7] java_start(Thread*)
+  [ 8] start_thread
+
+--- 10513400 ns (0.12%), 1 sample
+  [ 0] sched_yield@plt
+  [ 1] VMThread::loop()
+  [ 2] VMThread::run()
+  [ 3] java_start(Thread*)
+  [ 4] start_thread
+
+--- 10474600 ns (0.12%), 1 sample
+  [ 0] __pthread_cond_timedwait
+
+--- 10456000 ns (0.12%), 1 sample
+  [ 0] WatcherThread::run()
+  [ 1] java_start(Thread*)
+  [ 2] start_thread
+
+--- 10446600 ns (0.12%), 1 sample
+  [ 0] __schedule_[k]
+  [ 1] schedule_[k]
+  [ 2] futex_wait_queue_me_[k]
+  [ 3] futex_wait_[k]
+  [ 4] do_futex_[k]
+  [ 5] __x64_sys_futex_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] __pthread_cond_timedwait
+
+--- 10119500 ns (0.11%), 1 sample
+  [ 0] jvmti_RawMonitorEnter
+  [ 1] debugMonitorEnter
+  [ 2] commonRef_refToID
+  [ 3] outStream_writeObjectRef
+  [ 4] handleReportEventCompositeCommand
+  [ 5] commandLoop
+  [ 6] JvmtiAgentThread::start_function_wrapper(JavaThread*, Thread*)
+  [ 7] JavaThread::thread_main_inner()
+  [ 8] JavaThread::run()
+  [ 9] java_start(Thread*)
+  [10] start_thread
+
+--- 10116500 ns (0.11%), 1 sample
+  [ 0] finish_task_switch.isra.0_[k]
+  [ 1] __schedule_[k]
+  [ 2] schedule_[k]
+  [ 3] futex_wait_queue_me_[k]
+  [ 4] futex_wait_[k]
+  [ 5] do_futex_[k]
+  [ 6] __x64_sys_futex_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] pthread_cond_wait@@GLIBC_2.3.2
+  [10] [unknown]
+
+--- 10102500 ns (0.11%), 1 sample
+  [ 0] java.lang.String.charAt
+  [ 1] java.lang.Integer.parseInt
+  [ 2] java.lang.Integer.valueOf
+  [ 3] base.stop.StopThread$ReadObjectThread.run
+
+--- 10091000 ns (0.11%), 1 sample
+  [ 0] vma_merge_[k]
+  [ 1] mprotect_fixup_[k]
+  [ 2] do_mprotect_pkey_[k]
+  [ 3] __x64_sys_mprotect_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] mprotect
+  [ 7] os::serialize_thread_states()
+  [ 8] SafepointSynchronize::begin()
+  [ 9] VMThread::loop()
+  [10] VMThread::run()
+  [11] java_start(Thread*)
+  [12] start_thread
+
+--- 10081100 ns (0.11%), 1 sample
+  [ 0] AddPNode::Ideal_base_and_offset(Node*, PhaseTransform*, long&)
+  [ 1] MemNode::find_previous_store(PhaseTransform*)
+  [ 2] LoadNode::Ideal(PhaseGVN*, bool)
+  [ 3] PhaseGVN::transform_no_reclaim(Node*)
+  [ 4] GraphKit::make_load(Node*, Node*, Type const*, BasicType, int, MemNode::MemOrd, LoadNode::ControlDependency, bool, bool, bool)
+  [ 5] LibraryCallKit::generate_current_thread(Node*&)
+  [ 6] LibraryCallKit::try_to_inline(int)
+  [ 7] LibraryIntrinsic::generate(JVMState*)
+  [ 8] Parse::do_call()
+  [ 9] Parse::do_one_bytecode()
+  [10] Parse::do_one_block()
+  [11] Parse::do_all_blocks()
+  [12] Parse::Parse(JVMState*, ciMethod*, float)
+  [13] ParseGenerator::generate(JVMState*)
+  [14] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [15] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [16] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [17] CompileBroker::compiler_thread_loop()
+  [18] JavaThread::thread_main_inner()
+  [19] JavaThread::run()
+  [20] java_start(Thread*)
+  [21] start_thread
+
+--- 10080700 ns (0.11%), 1 sample
+  [ 0] java.io.PrintStream.write
+  [ 1] sun.nio.cs.StreamEncoder.writeBytes
+  [ 2] sun.nio.cs.StreamEncoder.implFlushBuffer
+  [ 3] sun.nio.cs.StreamEncoder.flushBuffer
+  [ 4] java.io.OutputStreamWriter.flushBuffer
+  [ 5] java.io.PrintStream.write
+  [ 6] java.io.PrintStream.print
+  [ 7] java.io.PrintStream.println
+  [ 8] base.stop.StopThread$ReadObjectThread.run
+
+--- 10075200 ns (0.11%), 1 sample
+  [ 0] JvmtiEnv::GetFrameCount(JavaThread*, int*)
+  [ 1] jvmti_GetFrameCount
+  [ 2] getStackDepth
+  [ 3] handleAppResumeCompletion
+  [ 4] event_callback
+  [ 5] cbFramePop
+  [ 6] JvmtiExport::post_method_exit(JavaThread*, Method*, frame)
+  [ 7] InterpreterRuntime::post_method_exit(JavaThread*)
+  [ 8] java.lang.Thread.resume
+  [ 9] java.lang.Thread.stop
+  [10] base.stop.StopThread.main
+
+--- 10074800 ns (0.11%), 1 sample
+  [ 0] java.lang.Integer.getChars
+  [ 1] java.lang.AbstractStringBuilder.append
+  [ 2] java.lang.StringBuilder.append
+  [ 3] java.lang.Thread.<init>
+  [ 4] base.stop.StopThread$ChangeObjectThread.<init>
+  [ 5] base.stop.StopThread.main
+
+--- 10072400 ns (0.11%), 1 sample
+  [ 0] try_to_wake_up_[k]
+  [ 1] wake_up_q_[k]
+  [ 2] futex_wake_[k]
+  [ 3] do_futex_[k]
+  [ 4] __x64_sys_futex_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] __pthread_cond_signal
+  [ 8] java.lang.Thread.start0
+  [ 9] java.lang.Thread.start
+  [10] base.stop.StopThread.main
+
+--- 10071400 ns (0.11%), 1 sample
+  [ 0] os::PlatformEvent::park()
+  [ 1] Monitor::wait(bool, long, bool)
+  [ 2] VMThread::execute(VM_Operation*)
+  [ 3] JvmtiEnv::GetLocalObject(JavaThread*, int, int, _jobject**)
+  [ 4] jvmti_GetLocalObject
+  [ 5] handleAppResumeBreakpoint
+  [ 6] event_callback
+  [ 7] cbBreakpoint
+  [ 8] JvmtiExport::post_raw_breakpoint(JavaThread*, Method*, unsigned char*)
+  [ 9] InterpreterRuntime::_breakpoint(JavaThread*, Method*, unsigned char*)
+  [10] java.lang.Thread.resume
+  [11] java.lang.Thread.stop
+  [12] base.stop.StopThread.main
+
+--- 10069500 ns (0.11%), 1 sample
+  [ 0] netlink_has_listeners_[k]
+  [ 1] cn_netlink_send_mult_[k]
+  [ 2] proc_fork_connector_[k]
+  [ 3] copy_process_[k]
+  [ 4] kernel_clone_[k]
+  [ 5] __do_sys_clone_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] __clone
+  [ 9] os::create_thread(Thread*, os::ThreadType, unsigned long)
+  [10] JVM_StartThread
+  [11] java.lang.Thread.start0
+  [12] java.lang.Thread.start
+  [13] base.stop.StopThread.main
+
+--- 10068200 ns (0.11%), 1 sample
+  [ 0] x64_sys_call_[k]
+  [ 1] do_syscall_64_[k]
+  [ 2] entry_SYSCALL_64_after_hwframe_[k]
+  [ 3] __lll_unlock_wake
+  [ 4] Monitor::ILock(Thread*) [clone .part.2]
+  [ 5] Monitor::lock(Thread*)
+  [ 6] ciEnv::register_method(ciMethod*, int, CodeOffsets*, int, CodeBuffer*, int, OopMapSet*, ExceptionHandlerTable*, ImplicitExceptionTable*, AbstractCompiler*, int, bool, bool, RTMState)
+  [ 7] Compilation::compile_method()
+  [ 8] Compilation::Compilation(AbstractCompiler*, ciEnv*, ciMethod*, int, BufferBlob*)
+  [ 9] Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [10] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [11] CompileBroker::compiler_thread_loop()
+  [12] JavaThread::thread_main_inner()
+  [13] JavaThread::run()
+  [14] java_start(Thread*)
+  [15] start_thread
+
+--- 10066700 ns (0.11%), 1 sample
+  [ 0] Monitor::ILock(Thread*) [clone .part.2]
+  [ 1] Monitor::lock_without_safepoint_check()
+  [ 2] SafepointSynchronize::block(JavaThread*) [clone .part.42]
+  [ 3] ThreadStateTransition::transition_and_fence(JavaThread*, JavaThreadState, JavaThreadState) [clone .constprop.219]
+  [ 4] JVM_GetInheritedAccessControlContext
+  [ 5] java.security.AccessController.getInheritedAccessControlContext
+  [ 6] java.security.AccessControlContext.optimize
+  [ 7] java.security.AccessController.getContext
+  [ 8] java.lang.Thread.init
+  [ 9] java.lang.Thread.init
+  [10] java.lang.Thread.<init>
+  [11] base.stop.StopThread$ChangeObjectThread.<init>
+  [12] base.stop.StopThread.main
+
+--- 10066200 ns (0.11%), 1 sample
+  [ 0] finish_task_switch.isra.0_[k]
+  [ 1] __schedule_[k]
+  [ 2] schedule_[k]
+  [ 3] futex_wait_queue_me_[k]
+  [ 4] futex_wait_[k]
+  [ 5] do_futex_[k]
+  [ 6] __x64_sys_futex_[k]
+  [ 7] do_syscall_64_[k]
+  [ 8] entry_SYSCALL_64_after_hwframe_[k]
+  [ 9] __pthread_cond_timedwait
+  [10] java.lang.Thread.sleep
+  [11] base.stop.StopThread.main
+
+--- 10064600 ns (0.11%), 1 sample
+  [ 0] pthread_mutex_unlock
+  [ 1] Monitor::IWait(Thread*, long)
+  [ 2] Monitor::wait(bool, long, bool)
+  [ 3] VMThread::execute(VM_Operation*)
+  [ 4] JvmtiEnv::GetLocalObject(JavaThread*, int, int, _jobject**)
+  [ 5] jvmti_GetLocalObject
+  [ 6] handleAppResumeBreakpoint
+  [ 7] event_callback
+  [ 8] cbBreakpoint
+  [ 9] JvmtiExport::post_raw_breakpoint(JavaThread*, Method*, unsigned char*)
+  [10] InterpreterRuntime::_breakpoint(JavaThread*, Method*, unsigned char*)
+  [11] java.lang.Thread.resume
+  [12] java.lang.Thread.stop
+  [13] base.stop.StopThread.main
+
+--- 10064200 ns (0.11%), 1 sample
+  [ 0] schedule_[k]
+  [ 1] futex_wait_queue_me_[k]
+  [ 2] futex_wait_[k]
+  [ 3] do_futex_[k]
+  [ 4] __x64_sys_futex_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] pthread_cond_wait@@GLIBC_2.3.2
+  [ 8] [unknown]
+  [ 9] java.lang.Thread.resume
+  [10] java.lang.Thread.stop
+  [11] base.stop.StopThread.main
+
+--- 10063800 ns (0.11%), 1 sample
+  [ 0] pthread_cond_wait@@GLIBC_2.3.2
+  [ 1] [unknown]
+  [ 2] java.security.AccessController.getStackAccessControlContext
+  [ 3] java.security.AccessController.getContext
+  [ 4] java.lang.Thread.init
+  [ 5] java.lang.Thread.init
+  [ 6] java.lang.Thread.<init>
+  [ 7] base.stop.StopThread$ChangeObjectThread.<init>
+  [ 8] base.stop.StopThread.main
+
+--- 10062800 ns (0.11%), 1 sample
+  [ 0] JvmtiEventControllerPrivate::recompute_thread_enabled(JvmtiThreadState*) [clone .part.19]
+  [ 1] JvmtiEventControllerPrivate::recompute_enabled()
+  [ 2] JvmtiEventController::set_user_enabled(JvmtiEnvBase*, JavaThread*, jvmtiEvent, bool)
+  [ 3] JvmtiEnv::SetEventNotificationMode(jvmtiEventMode, jvmtiEvent, _jobject*, ...)
+  [ 4] jvmti_SetEventNotificationMode
+  [ 5] threadControl_setEventMode
+  [ 6] installHandler
+  [ 7] createInternal
+  [ 8] eventHandler_createInternalThreadOnly
+  [ 9] handleAppResumeBreakpoint
+  [10] event_callback
+  [11] cbBreakpoint
+  [12] JvmtiExport::post_raw_breakpoint(JavaThread*, Method*, unsigned char*)
+  [13] InterpreterRuntime::_breakpoint(JavaThread*, Method*, unsigned char*)
+  [14] java.lang.Thread.resume
+  [15] java.lang.Thread.stop
+  [16] base.stop.StopThread.main
+
+--- 10062700 ns (0.11%), 1 sample
+  [ 0] ciEnv::should_retain_local_variables() const
+  [ 1] LIRGenerator::state_for(Instruction*, ValueStack*, bool)
+  [ 2] LIRGenerator::do_NullCheck(NullCheck*)
+  [ 3] non-virtual thunk to LIRGenerator::block_do(BlockBegin*)
+  [ 4] BlockList::iterate_forward(BlockClosure*)
+  [ 5] Compilation::emit_lir()
+  [ 6] Compilation::compile_java_method()
+  [ 7] Compilation::compile_method()
+  [ 8] Compilation::Compilation(AbstractCompiler*, ciEnv*, ciMethod*, int, BufferBlob*)
+  [ 9] Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [10] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [11] CompileBroker::compiler_thread_loop()
+  [12] JavaThread::thread_main_inner()
+  [13] JavaThread::run()
+  [14] java_start(Thread*)
+  [15] start_thread
+
+--- 10061800 ns (0.11%), 1 sample
+  [ 0] Monitor::unlock()
+  [ 1] JvmtiRawMonitor::raw_enter(Thread*)
+  [ 2] JvmtiEnv::RawMonitorEnter(JvmtiRawMonitor*)
+  [ 3] debugMonitorEnter
+  [ 4] installHandler
+  [ 5] createInternal
+  [ 6] eventHandler_createInternalThreadOnly
+  [ 7] handleAppResumeBreakpoint
+  [ 8] event_callback
+  [ 9] cbBreakpoint
+  [10] JvmtiExport::post_raw_breakpoint(JavaThread*, Method*, unsigned char*)
+  [11] InterpreterRuntime::_breakpoint(JavaThread*, Method*, unsigned char*)
+  [12] java.lang.Thread.resume
+  [13] java.lang.Thread.stop
+  [14] base.stop.StopThread.main
+
+--- 10061800 ns (0.11%), 1 sample
+  [ 0] vframe::sender() const
+  [ 1] vframe::java_sender() const
+  [ 2] JvmtiThreadState::count_frames() [clone .part.23]
+  [ 3] JvmtiThreadState::cur_stack_depth()
+  [ 4] JvmtiExport::post_method_exit(JavaThread*, Method*, frame)
+  [ 5] InterpreterRuntime::post_method_exit(JavaThread*)
+  [ 6] java.lang.System.getSecurityManager
+  [ 7] java.lang.Thread.checkAccess
+  [ 8] java.lang.Thread.resume
+  [ 9] java.lang.Thread.stop
+  [10] base.stop.StopThread.main
+
+--- 10061400 ns (0.11%), 1 sample
+  [ 0] account_kernel_stack.isra.0_[k]
+  [ 1] copy_process_[k]
+  [ 2] kernel_clone_[k]
+  [ 3] __do_sys_clone_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] __clone
+  [ 7] os::create_thread(Thread*, os::ThreadType, unsigned long)
+  [ 8] JVM_StartThread
+  [ 9] java.lang.Thread.start0
+  [10] java.lang.Thread.start
+  [11] base.stop.StopThread.main
+
+--- 10061000 ns (0.11%), 1 sample
+  [ 0] PhaseChaitin::post_allocate_copy_removal()
+  [ 1] PhaseChaitin::Register_Allocate()
+  [ 2] Compile::Code_Gen()
+  [ 3] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [ 4] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [ 5] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [ 6] CompileBroker::compiler_thread_loop()
+  [ 7] JavaThread::thread_main_inner()
+  [ 8] JavaThread::run()
+  [ 9] java_start(Thread*)
+  [10] start_thread
+
+--- 10059700 ns (0.11%), 1 sample
+  [ 0] pthread_mutex_lock
+  [ 1] Monitor::IWait(Thread*, long)
+  [ 2] Monitor::wait(bool, long, bool)
+  [ 3] VMThread::execute(VM_Operation*)
+  [ 4] JvmtiEnv::GetLocalObject(JavaThread*, int, int, _jobject**)
+  [ 5] jvmti_GetLocalObject
+  [ 6] handleAppResumeBreakpoint
+  [ 7] event_callback
+  [ 8] cbBreakpoint
+  [ 9] JvmtiExport::post_raw_breakpoint(JavaThread*, Method*, unsigned char*)
+  [10] InterpreterRuntime::_breakpoint(JavaThread*, Method*, unsigned char*)
+  [11] java.lang.Thread.resume
+  [12] java.lang.Thread.stop
+  [13] base.stop.StopThread.main
+
+--- 10059100 ns (0.11%), 1 sample
+  [ 0] mutex_lock_[k]
+  [ 1] pipe_write_[k]
+  [ 2] new_sync_write_[k]
+  [ 3] vfs_write_[k]
+  [ 4] ksys_write_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] __libc_write
+  [ 8] [unknown]
+  [ 9] java.io.FileOutputStream.writeBytes
+  [10] java.io.FileOutputStream.write
+  [11] java.io.BufferedOutputStream.flushBuffer
+  [12] java.io.BufferedOutputStream.flush
+  [13] java.io.PrintStream.write
+  [14] sun.nio.cs.StreamEncoder.writeBytes
+  [15] sun.nio.cs.StreamEncoder.implFlushBuffer
+  [16] sun.nio.cs.StreamEncoder.flushBuffer
+  [17] java.io.OutputStreamWriter.flushBuffer
+  [18] java.io.PrintStream.newLine
+  [19] java.io.PrintStream.println
+  [20] base.stop.StopThread$ReadObjectThread.run
+
+--- 10058200 ns (0.11%), 1 sample
+  [ 0] ThreadSafepointState::create(JavaThread*)
+  [ 1] JVM_StartThread
+  [ 2] java.lang.Thread.start0
+  [ 3] java.lang.Thread.start
+  [ 4] base.stop.StopThread.main
+
+--- 10057900 ns (0.11%), 1 sample
+  [ 0] ThreadStateTransition::transition_from_native(JavaThread*, JavaThreadState) [clone .constprop.218]
+  [ 1] JVM_SetThreadPriority
+  [ 2] java.lang.Thread.setPriority0
+  [ 3] java.lang.Thread.setPriority
+  [ 4] java.lang.Thread.init
+  [ 5] java.lang.Thread.init
+  [ 6] java.lang.Thread.<init>
+  [ 7] base.stop.StopThread$ChangeObjectThread.<init>
+  [ 8] base.stop.StopThread.main
+
+--- 10057800 ns (0.11%), 1 sample
+  [ 0] InterpreterRuntime::get_original_bytecode_at(JavaThread*, Method*, unsigned char*)
+  [ 1] java.lang.Thread.stop
+  [ 2] base.stop.StopThread.main
+
+--- 10057500 ns (0.11%), 1 sample
+  [ 0] LinearScan::add_def(int, int, IntervalUseKind, BasicType)
+  [ 1] LinearScan::add_def(LIR_OprDesc*, int, IntervalUseKind)
+  [ 2] LinearScan::build_intervals()
+  [ 3] LinearScan::do_linear_scan()
+  [ 4] Compilation::emit_lir()
+  [ 5] Compilation::compile_java_method()
+  [ 6] Compilation::compile_method()
+  [ 7] Compilation::Compilation(AbstractCompiler*, ciEnv*, ciMethod*, int, BufferBlob*)
+  [ 8] Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [ 9] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [10] CompileBroker::compiler_thread_loop()
+  [11] JavaThread::thread_main_inner()
+  [12] JavaThread::run()
+  [13] java_start(Thread*)
+  [14] start_thread
+
+--- 10055400 ns (0.11%), 1 sample
+  [ 0] /lib/x86_64-linux-gnu/libc-2.27.so
+  [ 1] java.lang.Thread.start0
+  [ 2] java.lang.Thread.start
+  [ 3] base.stop.StopThread.main
+
+--- 10054900 ns (0.11%), 1 sample
+  [ 0] PhaseCCP::transform(Node*)
+  [ 1] PhaseCCP::do_transform()
+  [ 2] Compile::Optimize()
+  [ 3] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [ 4] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [ 5] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [ 6] CompileBroker::compiler_thread_loop()
+  [ 7] JavaThread::thread_main_inner()
+  [ 8] JavaThread::run()
+  [ 9] java_start(Thread*)
+  [10] start_thread
+
+--- 10053300 ns (0.11%), 1 sample
+  [ 0] GraphBuilder::iterate_bytecodes_for_block(int)
+  [ 1] GraphBuilder::iterate_all_blocks(bool)
+  [ 2] GraphBuilder::GraphBuilder(Compilation*, IRScope*)
+  [ 3] IRScope::IRScope(Compilation*, IRScope*, int, ciMethod*, int, bool)
+  [ 4] IR::IR(Compilation*, ciMethod*, int)
+  [ 5] Compilation::build_hir() [clone .part.79]
+  [ 6] Compilation::compile_java_method()
+  [ 7] Compilation::compile_method()
+  [ 8] Compilation::Compilation(AbstractCompiler*, ciEnv*, ciMethod*, int, BufferBlob*)
+  [ 9] Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [10] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [11] CompileBroker::compiler_thread_loop()
+  [12] JavaThread::thread_main_inner()
+  [13] JavaThread::run()
+  [14] java_start(Thread*)
+  [15] start_thread
+
+--- 10051500 ns (0.11%), 1 sample
+  [ 0] get_random_u64_[k]
+  [ 1] copy_process_[k]
+  [ 2] kernel_clone_[k]
+  [ 3] __do_sys_clone_[k]
+  [ 4] do_syscall_64_[k]
+  [ 5] entry_SYSCALL_64_after_hwframe_[k]
+  [ 6] __clone
+  [ 7] os::create_thread(Thread*, os::ThreadType, unsigned long)
+  [ 8] JVM_StartThread
+  [ 9] java.lang.Thread.start0
+  [10] java.lang.Thread.start
+  [11] base.stop.StopThread.main
+
+--- 10050700 ns (0.11%), 1 sample
+  [ 0] java.io.Writer.write
+  [ 1] java.io.PrintStream.write
+  [ 2] java.io.PrintStream.print
+  [ 3] java.io.PrintStream.println
+  [ 4] base.stop.StopThread$ReadObjectThread.run
+
+--- 10047400 ns (0.11%), 1 sample
+  [ 0] NMethodSweeper::sweep_code_cache()
+  [ 1] NMethodSweeper::possibly_sweep()
+  [ 2] CompileQueue::get()
+  [ 3] CompileBroker::compiler_thread_loop()
+  [ 4] JavaThread::thread_main_inner()
+  [ 5] JavaThread::run()
+  [ 6] java_start(Thread*)
+  [ 7] start_thread
+
+--- 10047100 ns (0.11%), 1 sample
+  [ 0] base.stop.StopThread.main
+
+--- 10046900 ns (0.11%), 1 sample
+  [ 0] IndexSetIterator::advance_and_next()
+  [ 1] IndexSet::lrg_union(unsigned int, unsigned int, unsigned int, PhaseIFG const*, RegMask const&)
+  [ 2] PhaseConservativeCoalesce::coalesce(Block*)
+  [ 3] PhaseCoalesce::coalesce_driver()
+  [ 4] PhaseChaitin::Register_Allocate()
+  [ 5] Compile::Code_Gen()
+  [ 6] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [ 7] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [ 8] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [ 9] CompileBroker::compiler_thread_loop()
+  [10] JavaThread::thread_main_inner()
+  [11] JavaThread::run()
+  [12] java_start(Thread*)
+  [13] start_thread
+
+--- 10046100 ns (0.11%), 1 sample
+  [ 0] os::malloc(unsigned long, MemoryType, NativeCallStack const&)
+  [ 1] Thread::Thread()
+  [ 2] JavaThread::JavaThread(void (*)(JavaThread*, Thread*), unsigned long)
+  [ 3] JVM_StartThread
+  [ 4] java.lang.Thread.start0
+  [ 5] java.lang.Thread.start
+  [ 6] base.stop.StopThread.main
+
+--- 10045900 ns (0.11%), 1 sample
+  [ 0] RegMask::is_aligned_pairs() const
+  [ 1] PhaseChaitin::gather_lrg_masks(bool)
+  [ 2] PhaseChaitin::Register_Allocate()
+  [ 3] Compile::Code_Gen()
+  [ 4] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [ 5] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [ 6] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [ 7] CompileBroker::compiler_thread_loop()
+  [ 8] JavaThread::thread_main_inner()
+  [ 9] JavaThread::run()
+  [10] java_start(Thread*)
+  [11] start_thread
+
+--- 10044600 ns (0.11%), 1 sample
+  [ 0] __pthread_enable_asynccancel
+  [ 1] [unknown]
+  [ 2] java.io.FileOutputStream.writeBytes
+  [ 3] java.io.FileOutputStream.write
+  [ 4] java.io.BufferedOutputStream.flushBuffer
+  [ 5] java.io.BufferedOutputStream.flush
+  [ 6] java.io.PrintStream.write
+  [ 7] sun.nio.cs.StreamEncoder.writeBytes
+  [ 8] sun.nio.cs.StreamEncoder.implFlushBuffer
+  [ 9] sun.nio.cs.StreamEncoder.flushBuffer
+  [10] java.io.OutputStreamWriter.flushBuffer
+  [11] java.io.PrintStream.write
+  [12] java.io.PrintStream.print
+  [13] java.io.PrintStream.println
+  [14] base.stop.StopThread$ReadObjectThread.run
+
+--- 10044300 ns (0.11%), 1 sample
+  [ 0] os::PlatformEvent::park(long) [clone .part.34]
+  [ 1] ObjectMonitor::EnterI(Thread*)
+  [ 2] ObjectMonitor::enter(Thread*)
+  [ 3] SharedRuntime::complete_monitor_locking_C(oopDesc*, BasicLock*, JavaThread*)
+  [ 4] java.lang.String.charAt
+  [ 5] java.lang.Integer.parseInt
+  [ 6] java.lang.Integer.valueOf
+  [ 7] base.stop.StopThread$ReadObjectThread.run
+
+--- 10043600 ns (0.11%), 1 sample
+  [ 0] PhaseChaitin::merge_multidefs()
+  [ 1] PhaseChaitin::Register_Allocate()
+  [ 2] Compile::Code_Gen()
+  [ 3] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [ 4] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [ 5] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [ 6] CompileBroker::compiler_thread_loop()
+  [ 7] JavaThread::thread_main_inner()
+  [ 8] JavaThread::run()
+  [ 9] java_start(Thread*)
+  [10] start_thread
+
+--- 10042200 ns (0.11%), 1 sample
+  [ 0] java.lang.Thread.yield
+  [ 1] base.stop.StopThread$ReadObjectThread.run
+
+--- 10042200 ns (0.11%), 1 sample
+  [ 0] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.run
+  [ 1] com.ttl.arthas.deps.io.netty.util.concurrent.SingleThreadEventExecutor$4.run
+  [ 2] com.ttl.arthas.deps.io.netty.util.internal.ThreadExecutorMap$2.run
+  [ 3] com.ttl.arthas.deps.io.netty.util.concurrent.FastThreadLocalRunnable.run
+  [ 4] java.lang.Thread.run
+
+--- 10041600 ns (0.11%), 1 sample
+  [ 0] do_sched_yield_[k]
+  [ 1] __x64_sys_sched_yield_[k]
+  [ 2] do_syscall_64_[k]
+  [ 3] entry_SYSCALL_64_after_hwframe_[k]
+  [ 4] __sched_yield
+  [ 5] java.lang.Thread.yield
+  [ 6] base.stop.StopThread$ReadObjectThread.run
+
+--- 10030000 ns (0.11%), 1 sample
+  [ 0] I2C/C2I adapters
+  [ 1] [unknown_Java]
+
+--- 10029700 ns (0.11%), 1 sample
+  [ 0] base.stop.StopThread$ReadObjectThread.run
+
+--- 10028100 ns (0.11%), 1 sample
+  [ 0] CodeHeap::find_start(void*) const
+  [ 1] CodeCache::find_blob(void*)
+  [ 2] frame::sender(RegisterMap*) const
+  [ 3] java_lang_Throwable::fill_in_stack_trace(Handle, methodHandle, Thread*)
+  [ 4] java_lang_Throwable::fill_in_stack_trace(Handle, methodHandle)
+  [ 5] JVM_FillInStackTrace
+  [ 6] Java_java_lang_Throwable_fillInStackTrace
+  [ 7] java.lang.Throwable.fillInStackTrace
+  [ 8] java.lang.Throwable.fillInStackTrace
+  [ 9] java.lang.Throwable.<init>
+  [10] java.lang.Error.<init>
+  [11] java.lang.ThreadDeath.<init>
+  [12] java.lang.Thread.stop
+  [13] base.stop.StopThread.main
+
+--- 10024700 ns (0.11%), 1 sample
+  [ 0] com.ttl.arthas.deps.io.netty.channel.ChannelOutboundBuffer.safeSuccess
+  [ 1] com.ttl.arthas.deps.io.netty.channel.ChannelOutboundBuffer.remove
+  [ 2] com.ttl.arthas.deps.io.netty.channel.ChannelOutboundBuffer.removeBytes
+  [ 3] com.ttl.arthas.deps.io.netty.channel.socket.nio.NioSocketChannel.doWrite
+  [ 4] com.ttl.arthas.deps.io.netty.channel.AbstractChannel$AbstractUnsafe.flush0
+  [ 5] com.ttl.arthas.deps.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.flush0
+  [ 6] com.ttl.arthas.deps.io.netty.channel.AbstractChannel$AbstractUnsafe.flush
+  [ 7] com.ttl.arthas.deps.io.netty.channel.DefaultChannelPipeline$HeadContext.flush
+  [ 8] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeFlush0
+  [ 9] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeWriteAndFlush
+  [10] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.write
+  [11] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.writeAndFlush
+  [12] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.writeAndFlush
+  [13] io.termd.core.telnet.netty.NettyTelnetConnection.send
+  [14] io.termd.core.telnet.TelnetConnection.write
+  [15] io.termd.core.telnet.TelnetTtyConnection$2.accept
+  [16] io.termd.core.telnet.TelnetTtyConnection$2.accept
+  [17] io.termd.core.io.BinaryEncoder.accept
+  [18] io.termd.core.io.BinaryEncoder.accept
+  [19] io.termd.core.tty.TtyOutputMode.sendChunk
+  [20] io.termd.core.tty.TtyOutputMode.accept
+  [21] io.termd.core.tty.TtyOutputMode.accept
+  [22] io.termd.core.readline.Readline$Interaction.refresh
+  [23] io.termd.core.readline.Readline$Interaction.refresh
+  [24] io.termd.core.readline.Readline$Interaction.handle
+  [25] io.termd.core.readline.Readline$Interaction.access$200
+  [26] io.termd.core.readline.Readline.deliver
+  [27] io.termd.core.readline.Readline.access$500
+  [28] io.termd.core.readline.Readline$Interaction$2.accept
+  [29] io.termd.core.readline.Readline$Interaction$2.accept
+  [30] io.termd.core.tty.TtyEventDecoder.accept
+  [31] io.termd.core.tty.TtyEventDecoder.accept
+  [32] io.termd.core.tty.ReadBuffer.accept
+  [33] io.termd.core.tty.ReadBuffer.accept
+  [34] io.termd.core.io.BinaryDecoder.write
+  [35] io.termd.core.io.BinaryDecoder.write
+  [36] io.termd.core.telnet.TelnetTtyConnection.onData
+  [37] io.termd.core.telnet.TelnetConnection.flushData
+  [38] io.termd.core.telnet.TelnetConnection.flushDataIfNecessary
+  [39] io.termd.core.telnet.TelnetConnection.receive
+  [40] io.termd.core.telnet.netty.TelnetChannelHandler.channelRead
+  [41] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [42] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [43] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.fireChannelRead
+  [44] com.ttl.arthas.deps.io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead
+  [45] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [46] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [47] com.ttl.arthas.deps.io.netty.channel.DefaultChannelPipeline.fireChannelRead
+  [48] com.ttl.arthas.deps.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read
+  [49] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.processSelectedKey
+  [50] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized
+  [51] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.processSelectedKeys
+  [52] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.run
+  [53] com.ttl.arthas.deps.io.netty.util.concurrent.SingleThreadEventExecutor$4.run
+  [54] com.ttl.arthas.deps.io.netty.util.internal.ThreadExecutorMap$2.run
+  [55] com.ttl.arthas.deps.io.netty.util.concurrent.FastThreadLocalRunnable.run
+  [56] java.lang.Thread.run
+
+--- 10024700 ns (0.11%), 1 sample
+  [ 0] VMThread::is_VM_thread() const
+  [ 1] VM_EnterInterpOnlyMode::doit()
+  [ 2] VM_Operation::evaluate()
+  [ 3] VMThread::evaluate_operation(VM_Operation*) [clone .constprop.57]
+  [ 4] VMThread::loop()
+  [ 5] VMThread::run()
+  [ 6] java_start(Thread*)
+  [ 7] start_thread
+
+--- 10022300 ns (0.11%), 1 sample
+  [ 0] com.ttl.arthas.deps.io.netty.buffer.PoolThreadCache.add
+  [ 1] com.ttl.arthas.deps.io.netty.buffer.PoolArena.free
+  [ 2] com.ttl.arthas.deps.io.netty.buffer.PooledByteBuf.deallocate
+  [ 3] com.ttl.arthas.deps.io.netty.buffer.AbstractReferenceCountedByteBuf.handleRelease
+  [ 4] com.ttl.arthas.deps.io.netty.buffer.AbstractReferenceCountedByteBuf.release
+  [ 5] com.ttl.arthas.deps.io.netty.util.ReferenceCountUtil.release
+  [ 6] com.ttl.arthas.deps.io.netty.util.ReferenceCountUtil.safeRelease
+  [ 7] com.ttl.arthas.deps.io.netty.channel.ChannelOutboundBuffer.remove
+  [ 8] com.ttl.arthas.deps.io.netty.channel.ChannelOutboundBuffer.removeBytes
+  [ 9] com.ttl.arthas.deps.io.netty.channel.socket.nio.NioSocketChannel.doWrite
+  [10] com.ttl.arthas.deps.io.netty.channel.AbstractChannel$AbstractUnsafe.flush0
+  [11] com.ttl.arthas.deps.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.flush0
+  [12] com.ttl.arthas.deps.io.netty.channel.AbstractChannel$AbstractUnsafe.flush
+  [13] com.ttl.arthas.deps.io.netty.channel.DefaultChannelPipeline$HeadContext.flush
+  [14] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeFlush0
+  [15] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeWriteAndFlush
+  [16] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.write
+  [17] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.writeAndFlush
+  [18] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.writeAndFlush
+  [19] io.termd.core.telnet.netty.NettyTelnetConnection.send
+  [20] io.termd.core.telnet.TelnetConnection.write
+  [21] io.termd.core.telnet.TelnetTtyConnection$2.accept
+  [22] io.termd.core.telnet.TelnetTtyConnection$2.accept
+  [23] io.termd.core.io.BinaryEncoder.accept
+  [24] io.termd.core.io.BinaryEncoder.accept
+  [25] io.termd.core.tty.TtyOutputMode.sendChunk
+  [26] io.termd.core.tty.TtyOutputMode.accept
+  [27] io.termd.core.tty.TtyOutputMode.accept
+  [28] com.taobao.arthas.core.shell.term.impl.TermImpl.echo
+  [29] com.taobao.arthas.core.shell.term.impl.TermImpl.echo
+  [30] com.taobao.arthas.core.shell.term.impl.TermImpl.echo
+  [31] com.taobao.arthas.core.shell.handlers.shell.ShellLineHandler.createJob
+  [32] com.taobao.arthas.core.shell.handlers.shell.ShellLineHandler.handle
+  [33] com.taobao.arthas.core.shell.handlers.shell.ShellLineHandler.handle
+  [34] com.taobao.arthas.core.shell.handlers.term.RequestHandler.accept
+  [35] com.taobao.arthas.core.shell.handlers.term.RequestHandler.accept
+  [36] io.termd.core.readline.Readline$Interaction.end
+  [37] io.termd.core.readline.Readline$Interaction.access$000
+  [38] io.termd.core.readline.Readline$2.apply
+  [39] io.termd.core.readline.Readline$Interaction.handle
+  [40] io.termd.core.readline.Readline$Interaction.access$200
+  [41] io.termd.core.readline.Readline.deliver
+  [42] io.termd.core.readline.Readline.access$500
+  [43] io.termd.core.readline.Readline$Interaction$2.accept
+  [44] io.termd.core.readline.Readline$Interaction$2.accept
+  [45] io.termd.core.tty.TtyEventDecoder.accept
+  [46] io.termd.core.tty.TtyEventDecoder.accept
+  [47] io.termd.core.tty.ReadBuffer.accept
+  [48] io.termd.core.tty.ReadBuffer.accept
+  [49] io.termd.core.io.BinaryDecoder.write
+  [50] io.termd.core.io.BinaryDecoder.write
+  [51] io.termd.core.telnet.TelnetTtyConnection.onData
+  [52] io.termd.core.telnet.TelnetConnection.flushData
+  [53] io.termd.core.telnet.TelnetConnection.flushDataIfNecessary
+  [54] io.termd.core.telnet.TelnetConnection.receive
+  [55] io.termd.core.telnet.netty.TelnetChannelHandler.channelRead
+  [56] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [57] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [58] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.fireChannelRead
+  [59] com.ttl.arthas.deps.io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead
+  [60] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [61] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [62] com.ttl.arthas.deps.io.netty.channel.DefaultChannelPipeline.fireChannelRead
+  [63] com.ttl.arthas.deps.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read
+  [64] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.processSelectedKey
+  [65] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized
+  [66] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.processSelectedKeys
+  [67] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.run
+  [68] com.ttl.arthas.deps.io.netty.util.concurrent.SingleThreadEventExecutor$4.run
+  [69] com.ttl.arthas.deps.io.netty.util.internal.ThreadExecutorMap$2.run
+  [70] com.ttl.arthas.deps.io.netty.util.concurrent.FastThreadLocalRunnable.run
+  [71] java.lang.Thread.run
+
+--- 10022200 ns (0.11%), 1 sample
+  [ 0] do_sched_yield_[k]
+  [ 1] __x64_sys_sched_yield_[k]
+  [ 2] do_syscall_64_[k]
+  [ 3] entry_SYSCALL_64_after_hwframe_[k]
+  [ 4] __sched_yield
+  [ 5] SafepointSynchronize::begin()
+  [ 6] VMThread::loop()
+  [ 7] VMThread::run()
+  [ 8] java_start(Thread*)
+  [ 9] start_thread
+
+--- 10021600 ns (0.11%), 1 sample
+  [ 0] copy_page_from_iter_[k]
+  [ 1] pipe_write_[k]
+  [ 2] new_sync_write_[k]
+  [ 3] vfs_write_[k]
+  [ 4] ksys_write_[k]
+  [ 5] do_syscall_64_[k]
+  [ 6] entry_SYSCALL_64_after_hwframe_[k]
+  [ 7] __libc_write
+  [ 8] [unknown]
+  [ 9] java.io.FileOutputStream.writeBytes
+  [10] java.io.FileOutputStream.write
+  [11] java.io.BufferedOutputStream.flushBuffer
+  [12] java.io.BufferedOutputStream.flush
+  [13] java.io.PrintStream.write
+  [14] sun.nio.cs.StreamEncoder.writeBytes
+  [15] sun.nio.cs.StreamEncoder.implFlushBuffer
+  [16] sun.nio.cs.StreamEncoder.flushBuffer
+  [17] java.io.OutputStreamWriter.flushBuffer
+  [18] java.io.PrintStream.newLine
+  [19] java.io.PrintStream.println
+  [20] base.stop.StopThread$ReadObjectThread.run
+
+--- 10019000 ns (0.11%), 1 sample
+  [ 0] hyperv_flush_tlb_multi_[k]
+  [ 1] flush_tlb_mm_range_[k]
+  [ 2] change_protection_[k]
+  [ 3] mprotect_fixup_[k]
+  [ 4] do_mprotect_pkey_[k]
+  [ 5] __x64_sys_mprotect_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] mprotect
+  [ 9] SafepointSynchronize::end()
+  [10] VMThread::loop()
+  [11] VMThread::run()
+  [12] java_start(Thread*)
+  [13] start_thread
+
+--- 10017400 ns (0.11%), 1 sample
+  [ 0] com.ttl.arthas.deps.io.netty.buffer.PooledUnsafeDirectByteBuf.getBytes
+  [ 1] com.ttl.arthas.deps.io.netty.buffer.AbstractByteBuf.getBytes
+  [ 2] io.termd.core.telnet.netty.TelnetChannelHandler.channelRead
+  [ 3] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [ 4] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [ 5] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.fireChannelRead
+  [ 6] com.ttl.arthas.deps.io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead
+  [ 7] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [ 8] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [ 9] com.ttl.arthas.deps.io.netty.channel.DefaultChannelPipeline.fireChannelRead
+  [10] com.ttl.arthas.deps.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read
+  [11] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.processSelectedKey
+  [12] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized
+  [13] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.processSelectedKeys
+  [14] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.run
+  [15] com.ttl.arthas.deps.io.netty.util.concurrent.SingleThreadEventExecutor$4.run
+  [16] com.ttl.arthas.deps.io.netty.util.internal.ThreadExecutorMap$2.run
+  [17] com.ttl.arthas.deps.io.netty.util.concurrent.FastThreadLocalRunnable.run
+  [18] java.lang.Thread.run
+
+--- 10015200 ns (0.11%), 1 sample
+  [ 0] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.run
+  [ 1] com.ttl.arthas.deps.io.netty.util.concurrent.SingleThreadEventExecutor$4.run
+  [ 2] com.ttl.arthas.deps.io.netty.util.internal.ThreadExecutorMap$2.run
+  [ 3] com.ttl.arthas.deps.io.netty.util.concurrent.FastThreadLocalRunnable.run
+  [ 4] java.lang.Thread.run
+
+--- 10014200 ns (0.11%), 1 sample
+  [ 0] com.ttl.arthas.deps.io.netty.buffer.AbstractReferenceCountedByteBuf.isAccessible
+  [ 1] com.ttl.arthas.deps.io.netty.buffer.AbstractByteBuf.ensureAccessible
+  [ 2] com.ttl.arthas.deps.io.netty.buffer.AbstractByteBuf.ensureWritable0
+  [ 3] com.ttl.arthas.deps.io.netty.buffer.AbstractByteBuf.ensureWritable
+  [ 4] com.ttl.arthas.deps.io.netty.buffer.AbstractByteBuf.writeBytes
+  [ 5] com.ttl.arthas.deps.io.netty.buffer.AbstractByteBuf.writeBytes
+  [ 6] io.termd.core.telnet.netty.NettyTelnetConnection.send
+  [ 7] io.termd.core.telnet.TelnetConnection.write
+  [ 8] io.termd.core.telnet.TelnetTtyConnection$2.accept
+  [ 9] io.termd.core.telnet.TelnetTtyConnection$2.accept
+  [10] io.termd.core.io.BinaryEncoder.accept
+  [11] io.termd.core.io.BinaryEncoder.accept
+  [12] io.termd.core.tty.TtyOutputMode.sendChunk
+  [13] io.termd.core.tty.TtyOutputMode.accept
+  [14] io.termd.core.tty.TtyOutputMode.accept
+  [15] io.termd.core.readline.Readline$Interaction.refresh
+  [16] io.termd.core.readline.Readline$Interaction.refresh
+  [17] io.termd.core.readline.Readline$Interaction.handle
+  [18] io.termd.core.readline.Readline$Interaction.access$200
+  [19] io.termd.core.readline.Readline.deliver
+  [20] io.termd.core.readline.Readline.access$500
+  [21] io.termd.core.readline.Readline$Interaction$2.accept
+  [22] io.termd.core.readline.Readline$Interaction$2.accept
+  [23] io.termd.core.tty.TtyEventDecoder.accept
+  [24] io.termd.core.tty.TtyEventDecoder.accept
+  [25] io.termd.core.tty.ReadBuffer.accept
+  [26] io.termd.core.tty.ReadBuffer.accept
+  [27] io.termd.core.io.BinaryDecoder.write
+  [28] io.termd.core.io.BinaryDecoder.write
+  [29] io.termd.core.telnet.TelnetTtyConnection.onData
+  [30] io.termd.core.telnet.TelnetConnection.flushData
+  [31] io.termd.core.telnet.TelnetConnection.flushDataIfNecessary
+  [32] io.termd.core.telnet.TelnetConnection.receive
+  [33] io.termd.core.telnet.netty.TelnetChannelHandler.channelRead
+  [34] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [35] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [36] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.fireChannelRead
+  [37] com.ttl.arthas.deps.io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead
+  [38] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [39] com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead
+  [40] com.ttl.arthas.deps.io.netty.channel.DefaultChannelPipeline.fireChannelRead
+  [41] com.ttl.arthas.deps.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read
+  [42] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.processSelectedKey
+  [43] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized
+  [44] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.processSelectedKeys
+  [45] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.run
+  [46] com.ttl.arthas.deps.io.netty.util.concurrent.SingleThreadEventExecutor$4.run
+  [47] com.ttl.arthas.deps.io.netty.util.internal.ThreadExecutorMap$2.run
+  [48] com.ttl.arthas.deps.io.netty.util.concurrent.FastThreadLocalRunnable.run
+  [49] java.lang.Thread.run
+
+--- 10013900 ns (0.11%), 1 sample
+  [ 0] hyperv_flush_tlb_multi_[k]
+  [ 1] flush_tlb_mm_range_[k]
+  [ 2] change_protection_[k]
+  [ 3] mprotect_fixup_[k]
+  [ 4] do_mprotect_pkey_[k]
+  [ 5] __x64_sys_mprotect_[k]
+  [ 6] do_syscall_64_[k]
+  [ 7] entry_SYSCALL_64_after_hwframe_[k]
+  [ 8] mprotect
+  [ 9] os::serialize_thread_states()
+  [10] SafepointSynchronize::begin()
+  [11] VMThread::loop()
+  [12] VMThread::run()
+  [13] java_start(Thread*)
+  [14] start_thread
+
+--- 10013100 ns (0.11%), 1 sample
+  [ 0] _raw_spin_lock_[k]
+  [ 1] __handle_mm_fault_[k]
+  [ 2] handle_mm_fault_[k]
+  [ 3] do_user_addr_fault_[k]
+  [ 4] exc_page_fault_[k]
+  [ 5] asm_exc_page_fault_[k]
+  [ 6] PhaseIdealLoop::Dominators()
+  [ 7] PhaseIdealLoop::build_and_optimize(bool, bool)
+  [ 8] Compile::Optimize()
+  [ 9] Compile::Compile(ciEnv*, C2Compiler*, ciMethod*, int, bool, bool, bool)
+  [10] C2Compiler::compile_method(ciEnv*, ciMethod*, int)
+  [11] CompileBroker::invoke_compiler_on_method(CompileTask*)
+  [12] CompileBroker::compiler_thread_loop()
+  [13] JavaThread::thread_main_inner()
+  [14] JavaThread::run()
+  [15] java_start(Thread*)
+  [16] start_thread
+
+--- 10012100 ns (0.11%), 1 sample
+  [ 0] java.lang.Thread.currentThread
+  [ 1] java.nio.channels.spi.AbstractSelector.begin
+  [ 2] sun.nio.ch.EPollSelectorImpl.doSelect
+  [ 3] sun.nio.ch.SelectorImpl.lockAndDoSelect
+  [ 4] sun.nio.ch.SelectorImpl.select
+  [ 5] sun.nio.ch.SelectorImpl.select
+  [ 6] com.ttl.arthas.deps.io.netty.channel.nio.SelectedSelectionKeySetSelector.select
+  [ 7] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.select
+  [ 8] com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.run
+  [ 9] com.ttl.arthas.deps.io.netty.util.concurrent.SingleThreadEventExecutor$4.run
+  [10] com.ttl.arthas.deps.io.netty.util.internal.ThreadExecutorMap$2.run
+  [11] com.ttl.arthas.deps.io.netty.util.concurrent.FastThreadLocalRunnable.run
+  [12] java.lang.Thread.run
+
+          ns  percent  samples  top
+  ----------  -------  -------  ---
+  3354939200   37.56%      336  SafepointSynchronize::begin()
+  1188117400   13.30%      118  SpinPause
+  1044078100   11.69%      105  __schedule_[k]
+   948226200   10.62%       22  clear_page_erms_[k]
+   402265100    4.50%       40  syscall_enter_from_user_mode_[k]
+   295020400    3.30%       29  do_sched_yield_[k]
+   290169300    3.25%       29  __sched_yield
+   204294300    2.29%       20  try_to_wake_up_[k]
+    90600100    1.01%        9  Method::checked_resolve_jmethod_id(_jmethodID*)
+    76205600    0.85%        8  ParallelTaskTerminator::offer_termination(TerminatorTerminator*)
+    53292200    0.60%        5  __wake_up_common_lock_[k]
+    50050200    0.56%        5  IndexSetIterator::advance_and_next()
+    40061800    0.45%        4  x64_sys_call_[k]
+    30072000    0.34%        3  schedule_[k]
+    30006600    0.34%        3  do_syscall_64_[k]
+    20920400    0.23%        2  JVM_Yield
+    20276800    0.23%        2  tcp_wfree_[k]
+    20182700    0.23%        2  finish_task_switch.isra.0_[k]
+    20170000    0.23%        2  wake_up_new_task_[k]
+    20152200    0.23%        2  LinearScanWalker::find_free_reg(int, int, int, int, bool*)
+    20061300    0.22%        2  /lib/x86_64-linux-gnu/libc-2.27.so
+    20057400    0.22%        2  com.ttl.arthas.deps.io.netty.channel.nio.NioEventLoop.run
+    20050300    0.22%        2  PhaseCFG::build_cfg()
+    20032900    0.22%        2  hyperv_flush_tlb_multi_[k]
+    19998700    0.22%        2  __pthread_getspecific
+    10513400    0.12%        1  sched_yield@plt
+    10474600    0.12%        1  __pthread_cond_timedwait
+    10456000    0.12%        1  WatcherThread::run()
+    10119500    0.11%        1  jvmti_RawMonitorEnter
+    10102500    0.11%        1  java.lang.String.charAt
+    10091000    0.11%        1  vma_merge_[k]
+    10081100    0.11%        1  AddPNode::Ideal_base_and_offset(Node*, PhaseTransform*, long&)
+    10080700    0.11%        1  java.io.PrintStream.write
+    10075200    0.11%        1  JvmtiEnv::GetFrameCount(JavaThread*, int*)
+    10074800    0.11%        1  java.lang.Integer.getChars
+    10071400    0.11%        1  os::PlatformEvent::park()
+    10069500    0.11%        1  netlink_has_listeners_[k]
+    10066700    0.11%        1  Monitor::ILock(Thread*) [clone .part.2]
+    10064600    0.11%        1  pthread_mutex_unlock
+    10063800    0.11%        1  pthread_cond_wait@@GLIBC_2.3.2
+    10062800    0.11%        1  JvmtiEventControllerPrivate::recompute_thread_enabled(JvmtiThreadState*) [clone .part.19]
+    10062700    0.11%        1  ciEnv::should_retain_local_variables() const
+    10061800    0.11%        1  vframe::sender() const
+    10061800    0.11%        1  Monitor::unlock()
+    10061400    0.11%        1  account_kernel_stack.isra.0_[k]
+    10061000    0.11%        1  PhaseChaitin::post_allocate_copy_removal()
+    10059700    0.11%        1  pthread_mutex_lock
+    10059100    0.11%        1  mutex_lock_[k]
+    10058200    0.11%        1  ThreadSafepointState::create(JavaThread*)
+    10057900    0.11%        1  ThreadStateTransition::transition_from_native(JavaThread*, JavaThreadState) [clone .constprop.218]
+    10057800    0.11%        1  InterpreterRuntime::get_original_bytecode_at(JavaThread*, Method*, unsigned char*)
+    10057500    0.11%        1  LinearScan::add_def(int, int, IntervalUseKind, BasicType)
+    10054900    0.11%        1  PhaseCCP::transform(Node*)
+    10053300    0.11%        1  GraphBuilder::iterate_bytecodes_for_block(int)
+    10051500    0.11%        1  get_random_u64_[k]
+    10050700    0.11%        1  java.io.Writer.write
+    10047400    0.11%        1  NMethodSweeper::sweep_code_cache()
+    10047100    0.11%        1  base.stop.StopThread.main
+    10046100    0.11%        1  os::malloc(unsigned long, MemoryType, NativeCallStack const&)
+    10045900    0.11%        1  RegMask::is_aligned_pairs() const
+    10044600    0.11%        1  __pthread_enable_asynccancel
+    10044300    0.11%        1  os::PlatformEvent::park(long) [clone .part.34]
+    10043600    0.11%        1  PhaseChaitin::merge_multidefs()
+    10042200    0.11%        1  java.lang.Thread.yield
+    10030000    0.11%        1  I2C/C2I adapters
+    10029700    0.11%        1  base.stop.StopThread$ReadObjectThread.run
+    10028100    0.11%        1  CodeHeap::find_start(void*) const
+    10024700    0.11%        1  VMThread::is_VM_thread() const
+    10024700    0.11%        1  com.ttl.arthas.deps.io.netty.channel.ChannelOutboundBuffer.safeSuccess
+    10022300    0.11%        1  com.ttl.arthas.deps.io.netty.buffer.PoolThreadCache.add
+    10021600    0.11%        1  copy_page_from_iter_[k]
+    10017400    0.11%        1  com.ttl.arthas.deps.io.netty.buffer.PooledUnsafeDirectByteBuf.getBytes
+    10014200    0.11%        1  com.ttl.arthas.deps.io.netty.buffer.AbstractReferenceCountedByteBuf.isAccessible
+    10013100    0.11%        1  _raw_spin_lock_[k]
+    10012100    0.11%        1  java.lang.Thread.currentThread
+    10008900    0.11%        1  PhaseChaitin::yank_if_dead_recurse(Node*, Node*, Block*, Node_List*, Node_List*) [clone .part.41]
+    10007100    0.11%        1  ObjectSynchronizer::deflate_idle_monitors()
+    10004300    0.11%        1  PhaseIdealLoop::get_late_ctrl(Node*, Node*)
+    10003500    0.11%        1  NodeHash::hash_find_insert(Node*)
+    10003400    0.11%        1  __netif_receive_skb_core.constprop.0_[k]
+    10003300    0.11%        1  __clock_gettime
+    10000400    0.11%        1  PhaseIFG::re_insert(unsigned int)
+    10000100    0.11%        1  PhaseChaitin::Split(unsigned int, ResourceArea*)
+     9999300    0.11%        1  os::NakedYield()
+     9998900    0.11%        1  com.ttl.arthas.deps.io.netty.channel.AbstractChannelHandlerContext.invokeFlush0
+     9995900    0.11%        1  os::yield_all(int)
+     9983500    0.11%        1  PSKeepAliveClosure::do_oop(oopDesc**)
+     9201300    0.10%        1  futex_wait_[k]
+       56800    0.00%        1  PSScavengeKlassClosure::do_klass(Klass*)
